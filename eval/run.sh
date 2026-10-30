@@ -21,6 +21,12 @@ done
 shift $((OPTIND - 1))
 
 cd "$root"
+# pip install --user や pipx で入れた pytest も見つかるようにする
+export PATH="$HOME/.local/bin:$PATH"
+if ! command -v pytest > /dev/null; then
+  echo "pytest が見つかりません。README の始め方を確認してください。" >&2
+  exit 1
+fi
 if [ $# -gt 0 ]; then
   cases=("${@%/}")
 else
