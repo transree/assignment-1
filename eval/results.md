@@ -16,6 +16,11 @@
 | cases/07 | | |
 | cases/08 | | |
 | cases/09 | | |
+| cases/10 | | |
+| cases/11 | | |
+| cases/12 | | |
+| cases/13 | | |
+| cases/14 | | |
 
 ## 1回ごとの判定
 

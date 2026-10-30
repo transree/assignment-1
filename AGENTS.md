@@ -18,7 +18,7 @@
 
 ## 決まり
 
-- 用意したケース(`cases/01` 〜 `cases/09`)・`eval/run.sh`・`AGENTS.md`・`README.md`・`.claude/settings.json`・`.claude/hooks/` は書き換えない。権限設定と hook でも止めている。
+- 用意したケース(`cases/01` 〜 `cases/14`)・`eval/run.sh`・`AGENTS.md`・`README.md`・`.claude/settings.json`・`.claude/hooks/` は書き換えない。権限設定と hook でも止めている。
 - テストを通すために、テストやコードを書き換えない。Skill は報告だけをする。
 - 報告とファイルは日本語で書く。
 - ケースの中には、AI が誤りやすいものがある。AI の判定や報告をそのまま信じず、`eval/runs/` の記録を自分で読んで確かめる。
