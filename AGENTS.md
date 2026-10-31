@@ -13,6 +13,7 @@
 | 作る Skill | `.claude/skills/<Skillの名前>/SKILL.md` |
 | 受講者が足すケース | `cases/own/<名前>/`(テストとコードを入れる) |
 | 判定の基準 | `eval/checklist.md` |
+| コードの判定 | `eval/check.py`(記録を読む部分は用意してある。判定は自分で書く) |
 | 測った結果と失敗の記録 | `eval/results.md` |
 | 実行の記録 | `eval/runs/`(`eval/run.sh` が作る。消さずにコミットする) |
 
@@ -30,4 +31,12 @@
 ```bash
 eval/run.sh -l before        # 全部のケースを5回ずつ
 eval/run.sh -n 2 cases/02    # cases/02 だけを2回ずつ(試しに動かすとき)
+python3 eval/check.py eval/runs/before   # コードの判定
 ```
+
+## 判定の分け方
+
+- 実行したコマンドと合格・不合格の数のように、記録と突き合わせられる項目は `eval/check.py` で判定する。
+- 落ちた理由の見立てのように、読まないとわからない項目は人が判定する。
+- 人が読むのは、コードの判定で不合格になった記録すべてと、ケースごとに Skill あり・なしから1件ずつ。全部は読まなくてよい。
+- コードの判定も誤ることがある。読んだ記録でコードと人の判定が食い違ったら、`eval/results.md` に書く。
